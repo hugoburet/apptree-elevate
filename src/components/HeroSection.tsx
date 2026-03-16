@@ -1,5 +1,4 @@
 import { ArrowUpRight, CheckCircle } from "lucide-react";
-import heroDashboard from "@/assets/hero-dashboard.png";
 
 const HeroSection = () => {
   return (
