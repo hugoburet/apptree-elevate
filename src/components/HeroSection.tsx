@@ -43,17 +43,6 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-
-        {/* Hero Image */}
-        <div className="max-w-4xl mx-auto animate-fade-in" style={{ animationDelay: "0.4s", opacity: 0 }}>
-          <div className="rounded-2xl overflow-hidden border border-border" style={{ boxShadow: "var(--shadow-glow), var(--shadow-elevated)" }}>
-            <img
-              src={heroDashboard}
-              alt="AppTree Dashboard - Invoice management for Stripe"
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
       </div>
     </section>
   );
