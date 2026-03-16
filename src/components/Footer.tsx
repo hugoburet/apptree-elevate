@@ -1,3 +1,5 @@
+import stripePartnerBadge from "@/assets/stripe-partner-badge.png";
+
 const Footer = () => {
   return (
     <footer className="py-12 bg-background border-t border-border">
