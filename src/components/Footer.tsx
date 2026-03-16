@@ -23,9 +23,12 @@ const Footer = () => {
             </a>
           </div>
 
-          <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} AppTree LLC
-          </p>
+          <div className="flex items-center gap-6">
+            <img src={stripePartnerBadge} alt="Stripe Certified Partner" className="h-8" />
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} AppTree LLC
+            </p>
+          </div>
         </div>
       </div>
     </footer>
