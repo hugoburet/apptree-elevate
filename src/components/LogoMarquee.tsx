@@ -1,13 +1,16 @@
 import edubexLogo from "@/assets/logos/edubex.png";
 import mindfulcareLogo from "@/assets/logos/mindfulcare.png";
 import logo6 from "@/assets/logos/logo6.png";
+import uscreenLogo from "@/assets/logos/uscreen.jpeg";
+import revelLogo from "@/assets/logos/revel.jpg";
+import inspiredLogo from "@/assets/logos/inspired.png";
 
 const logos = [
   { name: "Edubex", src: edubexLogo },
-  { name: "Uscreen", src: null },
-  { name: "Revel", src: null },
+  { name: "Uscreen", src: uscreenLogo },
+  { name: "Revel", src: revelLogo },
   { name: "Mindful Care", src: mindfulcareLogo },
-  { name: "Inspired", src: null },
+  { name: "Inspired", src: inspiredLogo },
   { name: "", src: logo6 },
 ];
 
