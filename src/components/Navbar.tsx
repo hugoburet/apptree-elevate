@@ -7,14 +7,19 @@ const Navbar = () => {
         <a href="/" className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-primary-foreground">
-              <path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z" fill="currentColor" opacity="0.9"/>
+              <rect x="10" y="16" width="4" height="5" rx="0.5" fill="currentColor" opacity="0.9"/>
+              <polygon points="12,2 19,12 5,12" fill="currentColor" opacity="0.9"/>
+              <polygon points="12,5 21,15 3,15" fill="currentColor" opacity="0.7"/>
+              <circle cx="9" cy="9" r="1" fill="hsl(152 60% 36%)"/>
+              <circle cx="15" cy="9" r="1" fill="hsl(152 60% 36%)"/>
+              <circle cx="12" cy="6.5" r="1" fill="hsl(152 60% 36%)"/>
             </svg>
           </div>
           <span className="font-display font-bold text-xl text-foreground">AppTree</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="https://marketplace.stripe.com/apps/invoice-uploader" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+          <a href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
             Apps
           </a>
           <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
