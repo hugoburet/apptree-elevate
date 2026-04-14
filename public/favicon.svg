@@ -1,4 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#6366f1"/>
-  <path d="M6 6h9v9H6V6zm11 0h9v9h-9V6zM6 17h9v9H6v-9zm11 0h9v9h-9v-9z" fill="white" opacity="0.9"/>
+  <rect width="32" height="32" rx="6" fill="#2d8a56"/>
+  <!-- Tree trunk -->
+  <rect x="14" y="20" width="4" height="7" rx="1" fill="white" opacity="0.9"/>
+  <!-- Tree canopy layers -->
+  <polygon points="16,4 22,14 10,14" fill="white" opacity="0.9"/>
+  <polygon points="16,8 24,18 8,18" fill="white" opacity="0.75"/>
+  <!-- Small dots representing apps -->
+  <circle cx="13" cy="12" r="1.2" fill="#2d8a56"/>
+  <circle cx="19" cy="12" r="1.2" fill="#2d8a56"/>
+  <circle cx="16" cy="9" r="1.2" fill="#2d8a56"/>
 </svg>
