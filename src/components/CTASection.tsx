@@ -15,7 +15,7 @@ const CTASection = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="https://marketplace.stripe.com/apps/invoice-uploader"
+                href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold bg-card text-foreground hover:bg-card/90 transition-colors duration-200"

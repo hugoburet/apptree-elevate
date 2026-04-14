@@ -26,7 +26,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.3s", opacity: 0 }}>
             <a
-              href="https://marketplace.stripe.com/apps/invoice-uploader"
+              href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-primary-foreground transition-all duration-200 hover:opacity-90 hover:shadow-lg"
