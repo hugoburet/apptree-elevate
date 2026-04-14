@@ -6,45 +6,45 @@
 
 @layer base {
   :root {
-    --background: 140 20% 98%;
-    --foreground: 150 30% 10%;
+    --background: 152 30% 12%;
+    --foreground: 140 15% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 150 30% 10%;
+    --card: 152 25% 16%;
+    --card-foreground: 140 15% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 150 30% 10%;
+    --popover: 152 25% 16%;
+    --popover-foreground: 140 15% 92%;
 
-    --primary: 152 60% 36%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 152 55% 45%;
+    --primary-foreground: 150 30% 6%;
 
-    --secondary: 168 50% 42%;
+    --secondary: 168 45% 40%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 140 20% 95%;
-    --muted-foreground: 150 10% 45%;
+    --muted: 152 20% 20%;
+    --muted-foreground: 140 12% 65%;
 
-    --accent: 130 55% 44%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 130 50% 50%;
+    --accent-foreground: 150 30% 6%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 15% 88%;
-    --input: 150 15% 88%;
-    --ring: 152 60% 36%;
+    --border: 152 18% 22%;
+    --input: 152 18% 22%;
+    --ring: 152 55% 45%;
 
     --radius: 0.75rem;
 
     /* Custom tokens */
-    --surface-elevated: 140 18% 96%;
-    --text-heading: 150 25% 15%;
-    --text-body: 150 12% 35%;
-    --gradient-hero: linear-gradient(135deg, hsl(152 60% 36% / 0.08), hsl(168 50% 42% / 0.06));
-    --gradient-primary: linear-gradient(135deg, hsl(152 60% 36%), hsl(168 50% 42%));
-    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.04), 0 1px 2px -1px rgb(0 0 0 / 0.04);
-    --shadow-elevated: 0 4px 20px -4px rgb(0 0 0 / 0.08);
-    --shadow-glow: 0 0 40px -10px hsl(152 60% 36% / 0.25);
+    --surface-elevated: 152 25% 14%;
+    --text-heading: 140 15% 92%;
+    --text-body: 140 12% 72%;
+    --gradient-hero: linear-gradient(135deg, hsl(152 55% 45% / 0.1), hsl(168 45% 40% / 0.08));
+    --gradient-primary: linear-gradient(135deg, hsl(152 55% 45%), hsl(168 45% 40%));
+    --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.12), 0 1px 2px -1px rgb(0 0 0 / 0.08);
+    --shadow-elevated: 0 4px 20px -4px rgb(0 0 0 / 0.2);
+    --shadow-glow: 0 0 40px -10px hsl(152 55% 45% / 0.3);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
