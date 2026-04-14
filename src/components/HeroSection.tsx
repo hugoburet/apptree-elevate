@@ -5,7 +5,7 @@ const HeroSection = () => {
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 hero-glow" />
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-30" style={{ background: "radial-gradient(circle, hsl(152 55% 45% / 0.15), transparent 70%)" }} />
+      <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-30" style={{ background: "radial-gradient(circle, hsl(239 84% 67% / 0.12), transparent 70%)" }} />
 
       <div className="container max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
@@ -26,7 +26,7 @@ const HeroSection = () => {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in" style={{ animationDelay: "0.3s", opacity: 0 }}>
             <a
-              href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader"
+              href="https://marketplace.stripe.com/apps/invoice-uploader"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-primary-foreground transition-all duration-200 hover:opacity-90 hover:shadow-lg"

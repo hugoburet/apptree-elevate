@@ -6,19 +6,15 @@ const Navbar = () => {
       <div className="container max-w-6xl mx-auto flex items-center justify-between h-16 px-6">
         <a href="/" className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <svg width="20" height="20" viewBox="4 1 24 30" fill="none" className="text-primary-foreground">
-              <rect x="14" y="25" width="4" height="4.5" rx="0.8" fill="currentColor" opacity="0.85"/>
-              <polygon points="16,2 21,10 11,10" fill="currentColor" opacity="0.95"/>
-              <polygon points="16,6 22.5,15 9.5,15" fill="currentColor" opacity="0.82"/>
-              <polygon points="16,10 24.5,20 7.5,20" fill="currentColor" opacity="0.7"/>
-              <polygon points="16,14 26.5,25 5.5,25" fill="currentColor" opacity="0.58"/>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" className="text-primary-foreground">
+              <path d="M3 3h7v7H3V3zm11 0h7v7h-7V3zM3 14h7v7H3v-7zm11 0h7v7h-7v-7z" fill="currentColor" opacity="0.9"/>
             </svg>
           </div>
           <span className="font-display font-bold text-xl text-foreground">AppTree</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
-          <a href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
+          <a href="https://marketplace.stripe.com/apps/invoice-uploader" target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">
             Apps
           </a>
           <a href="#features" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200">

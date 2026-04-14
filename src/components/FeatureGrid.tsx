@@ -6,7 +6,7 @@ const features = [
     title: "Invoice & Customer Bulk Upload",
     description: "Move all your data to Stripe using this simple-to-use app. Upload invoices, customers, and line items in bulk with CSV imports.",
     badge: "Live",
-    link: "https://marketplace.stripe.com/apps/invoice-and-customer-uploader",
+    link: "https://marketplace.stripe.com/apps/invoice-uploader",
   },
   {
     icon: FileText,
