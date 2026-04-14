@@ -7,14 +7,11 @@ const Navbar = () => {
         <a href="/" className="flex items-center gap-2.5">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
             <svg width="18" height="18" viewBox="0 0 32 32" fill="none" className="text-primary-foreground">
-              <rect x="14.5" y="22" width="3" height="6" rx="0.8" fill="currentColor" opacity="0.9"/>
-              <polygon points="16,3 23,13 9,13" fill="currentColor" opacity="0.9"/>
-              <polygon points="16,7 25,17 7,17" fill="currentColor" opacity="0.75"/>
-              <polygon points="16,11 27,21 5,21" fill="currentColor" opacity="0.6"/>
-              <line x1="12" y1="16" x2="8" y2="14" stroke="currentColor" strokeWidth="1.2" opacity="0.7"/>
-              <line x1="20" y1="16" x2="24" y2="14" stroke="currentColor" strokeWidth="1.2" opacity="0.7"/>
-              <circle cx="8" cy="14" r="1.5" fill="currentColor" opacity="0.9"/>
-              <circle cx="24" cy="14" r="1.5" fill="currentColor" opacity="0.9"/>
+              <rect x="14.5" y="24" width="3" height="4" rx="0.6" fill="currentColor" opacity="0.85"/>
+              <polygon points="16,3 20,10 12,10" fill="currentColor" opacity="0.95"/>
+              <polygon points="16,7 21.5,14 10.5,14" fill="currentColor" opacity="0.82"/>
+              <polygon points="16,11 23,18 9,18" fill="currentColor" opacity="0.7"/>
+              <polygon points="16,15 24.5,23 7.5,23" fill="currentColor" opacity="0.58"/>
             </svg>
           </div>
           <span className="font-display font-bold text-xl text-foreground">AppTree</span>
