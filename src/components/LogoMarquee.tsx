@@ -16,7 +16,7 @@ const logos = [
 
 const LogoMarquee = () => {
   return (
-    <section className="py-16 border-y border-border overflow-hidden" style={{ background: "hsl(152 25% 18%)" }}>
+    <section className="py-16 border-y border-border overflow-hidden" style={{ background: "hsl(150 30% 32%)" }}>
       <div className="container max-w-6xl mx-auto px-6 mb-8">
         <p className="text-center text-sm font-medium text-muted-foreground uppercase tracking-wider">
           Trusted by businesses using Stripe worldwide
@@ -24,8 +24,8 @@ const LogoMarquee = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-24 z-10" style={{ background: "linear-gradient(to right, hsl(152 25% 18%), transparent)" }} />
-        <div className="absolute right-0 top-0 bottom-0 w-24 z-10" style={{ background: "linear-gradient(to left, hsl(152 25% 18%), transparent)" }} />
+        <div className="absolute left-0 top-0 bottom-0 w-24 z-10" style={{ background: "linear-gradient(to right, hsl(150 30% 32%), transparent)" }} />
+        <div className="absolute right-0 top-0 bottom-0 w-24 z-10" style={{ background: "linear-gradient(to left, hsl(150 30% 32%), transparent)" }} />
 
         <div className="flex animate-marquee whitespace-nowrap">
           {[...logos, ...logos].map((logo, i) => (
