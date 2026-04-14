@@ -1,25 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
   <rect width="32" height="32" rx="6" fill="#1a3a2a"/>
   <!-- Trunk -->
-  <rect x="14.5" y="22" width="3" height="6" rx="0.8" fill="#4ade80" opacity="0.9"/>
-  <!-- Main canopy -->
-  <polygon points="16,3 23,13 9,13" fill="#4ade80" opacity="0.9"/>
-  <polygon points="16,7 25,17 7,17" fill="#4ade80" opacity="0.75"/>
-  <polygon points="16,11 27,21 5,21" fill="#4ade80" opacity="0.6"/>
-  <!-- Branches left -->
-  <line x1="12" y1="16" x2="8" y2="14" stroke="#4ade80" stroke-width="1.2" opacity="0.7"/>
-  <line x1="11" y1="19" x2="6" y2="18" stroke="#4ade80" stroke-width="1.2" opacity="0.6"/>
-  <!-- Branches right -->
-  <line x1="20" y1="16" x2="24" y2="14" stroke="#4ade80" stroke-width="1.2" opacity="0.7"/>
-  <line x1="21" y1="19" x2="26" y2="18" stroke="#4ade80" stroke-width="1.2" opacity="0.6"/>
-  <!-- App dots on branches -->
-  <circle cx="8" cy="14" r="1.5" fill="#4ade80" opacity="0.9"/>
-  <circle cx="6" cy="18" r="1.3" fill="#4ade80" opacity="0.8"/>
-  <circle cx="24" cy="14" r="1.5" fill="#4ade80" opacity="0.9"/>
-  <circle cx="26" cy="18" r="1.3" fill="#4ade80" opacity="0.8"/>
-  <!-- App dots in canopy -->
-  <circle cx="16" cy="8" r="1.3" fill="#1a3a2a"/>
-  <circle cx="13" cy="11" r="1.1" fill="#1a3a2a"/>
-  <circle cx="19" cy="11" r="1.1" fill="#1a3a2a"/>
-  <circle cx="16" cy="14" r="1.1" fill="#1a3a2a"/>
+  <rect x="14.5" y="24" width="3" height="4" rx="0.6" fill="#4ade80" opacity="0.85"/>
+  <!-- Conifer: stacked overlapping triangles, wider at base -->
+  <polygon points="16,3 20,10 12,10" fill="#4ade80" opacity="0.95"/>
+  <polygon points="16,7 21.5,14 10.5,14" fill="#4ade80" opacity="0.82"/>
+  <polygon points="16,11 23,18 9,18" fill="#4ade80" opacity="0.7"/>
+  <polygon points="16,15 24.5,23 7.5,23" fill="#4ade80" opacity="0.58"/>
 </svg>
