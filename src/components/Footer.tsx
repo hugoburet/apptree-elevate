@@ -7,12 +7,12 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-2.5">
             <div className="w-7 h-7 rounded-md bg-primary flex items-center justify-center">
-              <svg width="14" height="14" viewBox="0 0 32 32" fill="none" className="text-primary-foreground">
-                <rect x="14.5" y="24" width="3" height="4" rx="0.6" fill="currentColor" opacity="0.85"/>
-                <polygon points="16,3 20,10 12,10" fill="currentColor" opacity="0.95"/>
-                <polygon points="16,7 21.5,14 10.5,14" fill="currentColor" opacity="0.82"/>
-                <polygon points="16,11 23,18 9,18" fill="currentColor" opacity="0.7"/>
-                <polygon points="16,15 24.5,23 7.5,23" fill="currentColor" opacity="0.58"/>
+              <svg width="16" height="16" viewBox="4 1 24 30" fill="none" className="text-primary-foreground">
+                <rect x="14" y="25" width="4" height="4.5" rx="0.8" fill="currentColor" opacity="0.85"/>
+                <polygon points="16,2 21,10 11,10" fill="currentColor" opacity="0.95"/>
+                <polygon points="16,6 22.5,15 9.5,15" fill="currentColor" opacity="0.82"/>
+                <polygon points="16,10 24.5,20 7.5,20" fill="currentColor" opacity="0.7"/>
+                <polygon points="16,14 26.5,25 5.5,25" fill="currentColor" opacity="0.58"/>
               </svg>
             </div>
             <span className="font-display font-bold text-foreground">AppTree</span>
