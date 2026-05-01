@@ -1,22 +1,25 @@
-import { Upload, FileText, Zap, Shield, BarChart3, Users, LifeBuoy, MessageSquare } from "lucide-react";
+import { FileText, Zap, Shield, BarChart3, Users } from "lucide-react";
+import uploaderIcon from "@/assets/app-icons/uploader.png";
+import zendeskIcon from "@/assets/app-icons/zendesk.png";
+import slackIcon from "@/assets/app-icons/slack.png";
 
 const features = [
   {
-    icon: Upload,
+    image: uploaderIcon,
     title: "Invoice & Customer Bulk Upload",
     description: "Move all your data to Stripe using this simple-to-use app. Upload invoices, customers, and line items in bulk with CSV imports.",
     badge: "Live",
     link: "https://marketplace.stripe.com/apps/invoice-and-customer-uploader",
   },
   {
-    icon: LifeBuoy,
+    image: zendeskIcon,
     title: "Zendesk Connector for Stripe",
     description: "Bring Stripe customer and billing data directly into Zendesk. Give your support team instant context on payments, invoices, and subscriptions.",
     badge: "Live",
     link: "https://marketplace.stripe.com/apps/apptree-invoice-template-builder",
   },
   {
-    icon: MessageSquare,
+    image: slackIcon,
     title: "Slack Connector for Stripe",
     description: "Get real-time Stripe notifications and customer lookups in Slack. Keep your team in the loop on payments, disputes, and new customers.",
     badge: "Live",
@@ -67,9 +70,15 @@ const FeatureGrid = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => (
             <div key={feature.title} className="card-elevated p-6 group">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                <feature.icon className="w-5 h-5 text-primary" />
-              </div>
+              {feature.image ? (
+                <div className="w-12 h-12 rounded-lg overflow-hidden mb-4 ring-1 ring-border">
+                  <img src={feature.image} alt={`${feature.title} icon`} className="w-full h-full object-cover" />
+                </div>
+              ) : feature.icon ? (
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                  <feature.icon className="w-5 h-5 text-primary" />
+                </div>
+              ) : null}
 
               <div className="flex items-center gap-2 mb-2">
                 <h3 className="font-display font-bold text-lg text-foreground">{feature.title}</h3>
