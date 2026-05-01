@@ -1,4 +1,5 @@
-import { ArrowUpRight, CheckCircle } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
+import stripePartnerBadge from "@/assets/stripe-partner-badge.png";
 
 const HeroSection = () => {
   return (
@@ -10,9 +11,8 @@ const HeroSection = () => {
       <div className="container max-w-6xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-12">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in">
-            <CheckCircle className="w-4 h-4" />
-            Stripe Verified Partner
+          <div className="inline-flex mb-6 animate-fade-in">
+            <img src={stripePartnerBadge} alt="Stripe Premier Partner" className="h-10" />
           </div>
 
           <h1 className="font-display text-5xl md:text-6xl font-extrabold tracking-tight mb-6 animate-fade-in" style={{ animationDelay: "0.1s", opacity: 0 }}>
