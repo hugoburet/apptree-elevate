@@ -71,8 +71,8 @@ const FeatureGrid = () => {
           {features.map((feature) => (
             <div key={feature.title} className="card-elevated p-6 group">
               {feature.image ? (
-                <div className="w-12 h-12 rounded-lg overflow-hidden mb-4 ring-1 ring-border">
-                  <img src={feature.image} alt={`${feature.title} icon`} className="w-full h-full object-cover" />
+                <div className="w-12 h-12 rounded-lg overflow-hidden mb-4 ring-1 ring-border bg-white flex items-center justify-center">
+                  <img src={feature.image} alt={`${feature.title} icon`} className="w-full h-full object-contain" />
                 </div>
               ) : feature.icon ? (
                 <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
