@@ -1,4 +1,4 @@
-import { Upload, FileText, Zap, Shield, BarChart3, Users } from "lucide-react";
+import { Upload, FileText, Zap, Shield, BarChart3, Users, LifeBuoy, MessageSquare } from "lucide-react";
 
 const features = [
   {
@@ -7,6 +7,20 @@ const features = [
     description: "Move all your data to Stripe using this simple-to-use app. Upload invoices, customers, and line items in bulk with CSV imports.",
     badge: "Live",
     link: "https://marketplace.stripe.com/apps/invoice-and-customer-uploader",
+  },
+  {
+    icon: LifeBuoy,
+    title: "Zendesk Connector for Stripe",
+    description: "Bring Stripe customer and billing data directly into Zendesk. Give your support team instant context on payments, invoices, and subscriptions.",
+    badge: "Live",
+    link: "https://marketplace.stripe.com/apps/apptree-invoice-template-builder",
+  },
+  {
+    icon: MessageSquare,
+    title: "Slack Connector for Stripe",
+    description: "Get real-time Stripe notifications and customer lookups in Slack. Keep your team in the loop on payments, disputes, and new customers.",
+    badge: "Live",
+    link: "https://marketplace.stripe.com/apps/slack-connector",
   },
   {
     icon: FileText,
