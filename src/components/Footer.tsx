@@ -24,7 +24,7 @@ const Footer = () => {
             <a href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors duration-200">
               Stripe Marketplace
             </a>
-            <a href="mailto:support@apptree.biz" className="hover:text-foreground transition-colors duration-200">
+            <a href="/support" className="hover:text-foreground transition-colors duration-200">
               Support
             </a>
           </div>
