@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Pricing — Slack Connector | AppTree</title>
+<meta name="description" content="Simple pricing for AppTree's Slack Connector. Start with 50 free notifications, then $5/month or $44/year." />
+<link rel="canonical" href="https://apptree.biz/pricing" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:hsl(210 40% 99%);
+    --fg:hsl(222 47% 11%);
+    --card:#ffffff;
+    --muted:hsl(210 40% 97%);
+    --muted-fg:hsl(215 16% 47%);
+    --border:hsl(214 32% 91%);
+    --surface:hsl(210 33% 98%);
+    --primary:hsl(239 84% 67%);
+    --primary-fg:#fff;
+    --gradient:linear-gradient(135deg,hsl(239 84% 67%),hsl(199 89% 48%));
+    --shadow-card:0 1px 3px 0 rgb(0 0 0/.04),0 1px 2px -1px rgb(0 0 0/.04);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--fg);font-family:'Inter',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .display{font-family:'Plus Jakarta Sans','Inter',sans-serif;letter-spacing:-.02em}
+  .container{max-width:1024px;margin:0 auto;padding:0 24px}
+
+  /* Navbar */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+  .nav-inner{max-width:1152px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 24px}
+  .brand{display:flex;align-items:center;gap:10px}
+  .brand-mark{width:32px;height:32px;border-radius:8px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff}
+  .brand-name{font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:20px}
+  .nav-links{display:none;gap:32px;align-items:center}
+  @media(min-width:768px){.nav-links{display:flex}}
+  .nav-link{font-size:14px;font-weight:500;color:var(--muted-fg);transition:color .2s}
+  .nav-link:hover{color:var(--fg)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;border-radius:8px;transition:all .2s;cursor:pointer;border:0}
+  .btn-primary{background:var(--primary);color:#fff;padding:8px 16px;font-size:14px}
+  .btn-primary:hover{background:hsl(239 84% 63%)}
+  .btn-grad{background-image:var(--gradient);color:#fff;padding:12px 24px;font-size:15px}
+  .btn-grad:hover{opacity:.92;box-shadow:0 8px 24px -8px hsl(239 84% 67% /.5)}
+  .btn-muted{background:var(--muted);color:var(--fg);padding:12px 24px;font-size:15px}
+  .btn-muted:hover{background:hsl(210 40% 94%)}
+  .btn-ghost{background:var(--card);color:var(--fg);padding:12px 24px;font-size:15px;border:1px solid var(--border)}
+  .btn-ghost:hover{background:var(--muted)}
+  .icon{width:14px;height:14px}
+  .icon-lg{width:16px;height:16px}
+
+  /* Main */
+  main{padding:128px 0 80px;min-height:calc(100vh - 200px)}
+  .header{text-align:center;max-width:640px;margin:0 auto 56px}
+  .chip{display:inline-flex;align-items:center;gap:8px;padding:4px 12px;border-radius:999px;background:var(--card);border:1px solid var(--border);font-size:12px;font-weight:500;color:var(--muted-fg);margin-bottom:20px}
+  h1{font-family:'Plus Jakarta Sans',sans-serif;font-size:40px;font-weight:800;letter-spacing:-.02em;margin-bottom:16px;line-height:1.1}
+  @media(min-width:768px){h1{font-size:48px}}
+  .grad-text{background-image:var(--gradient);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{font-size:18px;color:var(--muted-fg);line-height:1.6}
+
+  .banner{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:24px;margin-bottom:40px;display:flex;flex-direction:column;gap:16px;align-items:flex-start;justify-content:space-between}
+  @media(min-width:768px){.banner{flex-direction:row;align-items:center;padding:28px}}
+  .banner h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:18px;font-weight:600;margin-bottom:4px}
+  .banner p{font-size:14px;color:var(--muted-fg)}
+  .banner-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--primary);white-space:nowrap}
+  .banner-link:hover{text-decoration:underline}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:24px;margin-bottom:48px}
+  @media(min-width:768px){.grid{grid-template-columns:1fr 1fr}}
+  .card{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:32px;display:flex;flex-direction:column;box-shadow:var(--shadow-card)}
+  .card h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:600;margin-bottom:4px}
+  .card .tag{font-size:14px;color:var(--muted-fg);margin-bottom:24px}
+  .price{font-family:'Plus Jakarta Sans',sans-serif;font-size:48px;font-weight:800;letter-spacing:-.02em}
+  .price-suffix{color:var(--muted-fg);margin-left:8px;font-size:16px}
+  .price-row{margin-bottom:24px}
+  .strike{text-decoration:line-through}
+  .savings{color:var(--primary);font-weight:500}
+  ul.features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;flex:1}
+  ul.features li{display:flex;align-items:flex-start;gap:12px;font-size:14px;color:var(--muted-fg)}
+  ul.features svg{width:16px;height:16px;color:var(--primary);margin-top:2px;flex-shrink:0}
+
+  .card-wrap-grad{border-radius:16px;padding:1px;background-image:var(--gradient);position:relative}
+  .badge-best{position:absolute;top:-12px;left:50%;transform:translateX(-50%);padding:4px 12px;border-radius:999px;font-size:12px;font-weight:600;color:#fff;background-image:var(--gradient);white-space:nowrap}
+  .card-inner{background:var(--card);border-radius:15px;padding:32px;display:flex;flex-direction:column;height:100%}
+
+  .cta-box{border:1px solid var(--border);background:var(--surface);border-radius:16px;padding:32px;text-align:center}
+  .cta-box h3{font-family:'Plus Jakarta Sans',sans-serif;font-size:20px;font-weight:600;margin-bottom:8px}
+  .cta-box p{color:var(--muted-fg);margin-bottom:20px;max-width:560px;margin-left:auto;margin-right:auto}
+
+  .acct-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;background:hsl(239 84% 67% /.08);border:1px solid hsl(239 84% 67% /.25);font-size:13px;font-weight:500;color:var(--primary);margin-bottom:20px;font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,monospace}
+  .acct-badge .dot{width:6px;height:6px;border-radius:999px;background:var(--primary)}
+  .btn[disabled]{opacity:.6;cursor:wait}
+  .err{color:#b91c1c;font-size:13px;margin-top:12px;text-align:center;min-height:18px}
+  .success-box{border:1px solid var(--border);background:var(--card);border-radius:16px;padding:56px 32px;text-align:center;box-shadow:var(--shadow-card);max-width:560px;margin:0 auto}
+  .success-emoji{font-size:48px;margin-bottom:16px;display:block}
+  .success-box h2{font-family:'Plus Jakarta Sans',sans-serif;font-size:32px;font-weight:800;letter-spacing:-.02em;margin-bottom:12px}
+  .success-box p{color:var(--muted-fg);margin-bottom:24px;font-size:16px}
+  .hidden{display:none !important}
+
+  /* Footer */
+  footer{padding:48px 0;background:var(--bg);border-top:1px solid var(--border)}
+  .footer-inner{max-width:1152px;margin:0 auto;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:24px}
+  @media(min-width:768px){.footer-inner{flex-direction:row;justify-content:space-between}}
+  .footer-brand{display:flex;align-items:center;gap:10px}
+  .footer-mark{width:28px;height:28px;border-radius:6px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff}
+  .footer-links{display:flex;align-items:center;gap:24px;font-size:14px;color:var(--muted-fg)}
+  .footer-links a:hover{color:var(--fg)}
+  .footer-meta{display:flex;align-items:center;gap:24px;font-size:14px;color:var(--muted-fg)}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Primary">
+  <div class="nav-inner">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none">
+          <polygon points="16,3 12,9 20,9" fill="currentColor" opacity=".5"/>
+          <polygon points="16,6 11,12 21,12" fill="currentColor" opacity=".6"/>
+          <polygon points="16,9 10,15 22,15" fill="currentColor" opacity=".7"/>
+          <polygon points="16,12 9,18 23,18" fill="currentColor" opacity=".8"/>
+          <polygon points="16,15 8,21 24,21" fill="currentColor" opacity=".85"/>
+          <polygon points="16,18 7,24 25,24" fill="currentColor" opacity=".9"/>
+          <rect x="14" y="24" width="4" height="4" rx="1" fill="currentColor" opacity=".9"/>
+        </svg>
+      </span>
+      <span class="brand-name">AppTree</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-link" href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader" target="_blank" rel="noopener">Apps</a>
+      <a class="nav-link" href="/#features">Features</a>
+      <a class="btn btn-primary" href="mailto:support@apptree.biz">
+        Contact Us
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <div class="container">
+
+
+    <header class="header">
+      <div class="chip">Slack Connector Pricing</div>
+      <div id="acct-badge" class="acct-badge hidden"><span class="dot"></span><span>Upgrading account <span id="acct-id"></span></span></div>
+      <h1>Simple pricing for <span class="grad-text">Slack Connector</span></h1>
+      <p class="lead">Start with 50 free notifications per account. Upgrade anytime to keep your team in sync with Stripe.</p>
+    </header>
+
+    <div id="success-state" class="hidden">
+      <div class="success-box">
+        <span class="success-emoji" aria-hidden="true">🎉</span>
+        <h2>You're on Pro</h2>
+        <p>Thanks for upgrading. Your Slack Connector is now unlocked — head back to Stripe to start using it.</p>
+        <a class="btn btn-grad" href="https://dashboard.stripe.com/apps">
+          Open Stripe dashboard
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div id="pricing-state">
+      <section class="banner">
+        <div>
+          <h3 class="display">Free trial included</h3>
+          <p>Every account gets <strong style="color:var(--fg);font-weight:500">50 notifications free</strong> — no credit card required.</p>
+        </div>
+        <a class="banner-link" href="https://marketplace.stripe.com/apps/slack-connector" target="_blank" rel="noopener">
+          Start free trial
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </section>
+
+      <section class="grid">
+        <!-- Monthly -->
+        <article class="card">
+          <h3 class="display">Monthly</h3>
+          <p class="tag">Flexible, cancel anytime</p>
+          <div class="price-row">
+            <span class="price">$5</span><span class="price-suffix">/ month</span>
+          </div>
+          <ul class="features">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Unlimited Slack workspaces</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Real-time Stripe event notifications</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Customizable channel routing</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Email support</span></li>
+          </ul>
+          <a class="btn btn-muted upgrade-btn" data-interval="monthly" href="https://marketplace.stripe.com/apps/slack-connector" target="_blank" rel="noopener">
+            <span class="btn-label">Install from Stripe</span>
+            <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </article>
+
+        <!-- Yearly -->
+        <article class="card-wrap-grad">
+          <span class="badge-best">Best value — Save 27%</span>
+          <div class="card-inner">
+            <h3 class="display">Yearly</h3>
+            <p class="tag">Billed annually</p>
+            <div class="price-row">
+              <span class="price">$44</span><span class="price-suffix">/ year</span>
+              <div style="margin-top:4px;font-size:14px;color:var(--muted-fg)">
+                <span class="strike">$60</span> <span class="savings">— $16 off</span>
+              </div>
+            </div>
+            <ul class="features">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Everything in Monthly</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>2 months free ($16 savings)</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Priority email support</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Early access to new features</span></li>
+            </ul>
+            <a class="btn btn-grad upgrade-btn" data-interval="yearly" href="https://marketplace.stripe.com/apps/slack-connector" target="_blank" rel="noopener">
+              <span class="btn-label">Install from Stripe</span>
+              <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </article>
+      </section>
+
+      <p id="checkout-err" class="err" role="alert"></p>
+
+      <section class="cta-box">
+        <h3 class="display">Already an AppTree customer?</h3>
+        <p>Existing AppTree users get an additional discount on the Slack Connector. Just send us a quick email and we'll set you up.</p>
+        <a class="btn btn-ghost" href="mailto:support@apptree.biz?subject=AppTree%20user%20discount%20%E2%80%94%20Slack%20Connector">
+          Email support@apptree.biz
+          <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
+        </a>
+      </section>
+    </div>
+
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="footer-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 32 32" fill="none">
+          <polygon points="16,3 12,9 20,9" fill="currentColor" opacity=".5"/>
+          <polygon points="16,6 11,12 21,12" fill="currentColor" opacity=".6"/>
+          <polygon points="16,9 10,15 22,15" fill="currentColor" opacity=".7"/>
+          <polygon points="16,12 9,18 23,18" fill="currentColor" opacity=".8"/>
+          <polygon points="16,15 8,21 24,21" fill="currentColor" opacity=".85"/>
+          <polygon points="16,18 7,24 25,24" fill="currentColor" opacity=".9"/>
+          <rect x="14" y="24" width="4" height="4" rx="1" fill="currentColor" opacity=".9"/>
+        </svg>
+      </span>
+      <span style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700">AppTree</span>
+    </div>
+    <div class="footer-links">
+      <a href="https://marketplace.stripe.com/apps/invoice-and-customer-uploader" target="_blank" rel="noopener">Stripe Marketplace</a>
+      <a href="/support">Support</a>
+    </div>
+    <div class="footer-meta">
+      <p>© <span id="yr"></span> AppTree LLC</p>
+    </div>
+  </div>
+</footer>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  (function () {
+    var CHECKOUT_URL = 'https://gbtzgszldsarfwzcqoiz.supabase.co/functions/v1/create-checkout-session';
+    var MARKETPLACE_URL = 'https://marketplace.stripe.com/apps/slack-connector';
+    var SUCCESS_URL = 'https://apptree.biz/pricing/?success=true';
+    var CANCEL_URL = 'https://apptree.biz/pricing/';
+
+    var params = new URLSearchParams(window.location.search);
+    var accountId = params.get('account_id');
+    var isSuccess = params.get('success') === 'true';
+
+    // Success state
+    if (isSuccess) {
+      document.getElementById('pricing-state').classList.add('hidden');
+      document.getElementById('success-state').classList.remove('hidden');
+      return;
+    }
+
+    // Account badge
+    if (accountId) {
+      var badge = document.getElementById('acct-badge');
+      var trunc = accountId.length > 18 ? accountId.slice(0, 14) + '…' : accountId;
+      document.getElementById('acct-id').textContent = trunc;
+      badge.title = accountId;
+      badge.classList.remove('hidden');
+    }
+
+    var errEl = document.getElementById('checkout-err');
+    var buttons = document.querySelectorAll('.upgrade-btn');
+
+    buttons.forEach(function (btn) {
+      // If we have an account_id, swap label and behavior to "Upgrade to Pro"
+      if (accountId) {
+        var label = btn.querySelector('.btn-label');
+        if (label) label.textContent = 'Upgrade to Pro';
+        btn.removeAttribute('target');
+        btn.removeAttribute('rel');
+        btn.setAttribute('href', '#');
+      }
+
+      btn.addEventListener('click', function (e) {
+        if (!accountId) return; // fall through to marketplace link
+        e.preventDefault();
+        if (btn.hasAttribute('disabled')) return;
+
+        errEl.textContent = '';
+        var originalLabel = btn.querySelector('.btn-label');
+        var originalText = originalLabel ? originalLabel.textContent : '';
+        if (originalLabel) originalLabel.textContent = 'Redirecting…';
+        btn.setAttribute('disabled', 'disabled');
+
+        fetch(CHECKOUT_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            account_id: accountId,
+            billing_interval: btn.getAttribute('data-interval'),
+            success_url: SUCCESS_URL,
+            cancel_url: CANCEL_URL
+          })
+        })
+          .then(function (r) {
+            if (!r.ok) throw new Error('Checkout request failed (' + r.status + ')');
+            return r.json();
+          })
+          .then(function (data) {
+            if (data && data.url) {
+              window.location.href = data.url;
+            } else {
+              throw new Error('No checkout URL returned');
+            }
+          })
+          .catch(function (err) {
+            errEl.textContent = err.message + '. Please try again or contact support@apptree.biz.';
+            if (originalLabel) originalLabel.textContent = originalText;
+            btn.removeAttribute('disabled');
+          });
+      });
+    });
+  })();
+</script>
+</body>
+</html>
