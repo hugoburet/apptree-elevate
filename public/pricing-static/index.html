@@ -309,6 +309,7 @@
 
     var params = new URLSearchParams(window.location.search);
     var accountId = params.get('account_id');
+    var mode = params.get('mode') || 'live';
     var isSuccess = params.get('success') === 'true';
 
     // Success state
