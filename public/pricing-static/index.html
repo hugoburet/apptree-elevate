@@ -198,14 +198,14 @@
           <div class="upgrade-card-inner">
 
             <div class="toggle" role="tablist" aria-label="Billing interval">
-              <button type="button" id="tab-monthly" class="active" role="tab" aria-selected="true" data-interval="monthly">Monthly</button>
-              <button type="button" id="tab-yearly" role="tab" aria-selected="false" data-interval="yearly">
+              <button type="button" id="tab-monthly" role="tab" aria-selected="false" data-interval="monthly">Monthly</button>
+              <button type="button" id="tab-yearly" class="active" role="tab" aria-selected="true" data-interval="yearly">
                 Yearly
                 <span class="save-pill">SAVE 27%</span>
               </button>
             </div>
 
-            <div class="plan-name" id="plan-name">Monthly</div>
+            <div class="plan-name" id="plan-name">Yearly</div>
             <div class="price-row">
               <span class="price" id="price">$5</span>
               <span class="price-suffix" id="price-suffix">/ month</span>
@@ -219,8 +219,8 @@
               <li id="feat-priority" class="hidden"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Priority support &amp; early access</span></li>
             </ul>
 
-            <a id="upgrade-btn" class="btn btn-grad btn-full upgrade-btn" data-interval="monthly" href="https://marketplace.stripe.com/apps/slack-connector" target="_blank" rel="noopener">
-              <span class="btn-label">Install from Stripe</span>
+            <a id="upgrade-btn" class="btn btn-grad btn-full upgrade-btn" data-interval="yearly" href="https://marketplace.stripe.com/apps/slack-connector" target="_blank" rel="noopener">
+              <span class="btn-label">Get started — $44/year</span>
               <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
             </a>
 
@@ -345,7 +345,7 @@
       }
     };
 
-    var current = 'monthly';
+    var current = 'yearly';
     var priceEl = document.getElementById('price');
     var suffixEl = document.getElementById('price-suffix');
     var noteEl = document.getElementById('price-note');
@@ -377,6 +377,9 @@
 
     tabs.monthly.addEventListener('click', function () { setPlan('monthly'); });
     tabs.yearly.addEventListener('click', function () { setPlan('yearly'); });
+
+    // Sync UI to default plan
+    setPlan(current);
 
     // Configure CTA depending on account_id
     if (accountId) {
