@@ -409,7 +409,7 @@
           account_id: accountId,
           mode: mode,
           billing_interval: current,
-          success_url: SUCCESS_URL,
+          success_url: SUCCESS_URL_BASE + '&account_id=' + accountId,
           cancel_url: CANCEL_URL + '?account_id=' + encodeURIComponent(accountId)
         })
       })
