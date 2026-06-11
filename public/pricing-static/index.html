@@ -378,6 +378,9 @@
     tabs.monthly.addEventListener('click', function () { setPlan('monthly'); });
     tabs.yearly.addEventListener('click', function () { setPlan('yearly'); });
 
+    // Sync UI to default plan
+    setPlan(current);
+
     // Configure CTA depending on account_id
     if (accountId) {
       btn.querySelector('.btn-label').textContent = 'Upgrade to Pro';
