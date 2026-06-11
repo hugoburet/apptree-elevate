@@ -167,7 +167,7 @@
         <span class="success-emoji" aria-hidden="true">🎉</span>
         <h2>You're on Pro</h2>
         <p>Thanks for upgrading. Your Slack Connector is now unlocked — head back to Stripe to start using it.</p>
-        <a class="btn btn-grad" href="https://dashboard.stripe.com/apps">
+        <a class="btn btn-grad" href="https://dashboard.stripe.com/apps/com.apptree.slack-connector">
           Open Stripe dashboard
           <svg class="icon-lg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg>
         </a>
@@ -304,7 +304,7 @@
   (function () {
     var CHECKOUT_URL = 'https://gbtzgszldsarfwzcqoiz.supabase.co/functions/v1/create-checkout-session';
     var MARKETPLACE_URL = 'https://marketplace.stripe.com/apps/slack-connector';
-    var SUCCESS_URL = 'https://apptree.biz/pricing/?success=true';
+    var SUCCESS_URL_BASE = 'https://apptree.biz/pricing/?success=true';
     var CANCEL_URL = 'https://apptree.biz/pricing/';
 
     var params = new URLSearchParams(window.location.search);
@@ -409,7 +409,7 @@
           account_id: accountId,
           mode: mode,
           billing_interval: current,
-          success_url: SUCCESS_URL,
+          success_url: SUCCESS_URL_BASE + '&account_id=' + accountId,
           cancel_url: CANCEL_URL + '?account_id=' + encodeURIComponent(accountId)
         })
       })
